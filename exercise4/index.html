@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>CSS Letterform Demo</title>
+    <style>
+
+
+
+
+
+      .parent {
+          position: absolute;
+          display: flex;
+          width: 300px;
+          height: 300px;
+          border: solid 3px black;
+          flex-direction: row;
+          justify-content: space-between;
+          background: radial-gradient(circle at top right, rgb(0, 0, 0), rgb(17, 0, 255));
+      }
+      .parent2 {
+          position: absolute;
+          display: flex;
+          width: 300px;
+          height: 300px;
+          border: solid 3px black;
+          flex-direction: row;
+          justify-content: space-between;
+          background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(0, 43, 93));
+      }
+
+      .parent3 {
+          position: absolute;
+          display: flex;
+          width: 300px;
+          height: 300px;
+          border: solid 3px black;
+          flex-direction: row;
+          justify-content: space-between;
+          background: radial-gradient(circle at top left, rgb(255, 255, 255), rgb(103, 192, 255));
+      }
+
+      .parent4 {
+          position: absolute;
+          display: flex;
+          width: 300px;
+          height: 300px;
+          
+          border-radius: 100%;
+          flex-direction: row;
+          justify-content: center;
+          background: radial-gradient(circle at top left, rgb(255, 255, 255), rgb(103, 192, 255));
+      }
+
+      .parent5 {
+          position: absolute;
+          display: flex;
+          width: 300px;
+          height: 300px;
+          
+          border-radius: 100%;
+          flex-direction: row;
+          justify-content: center;
+          background: radial-gradient(circle at top, rgb(40, 195, 219), rgb(0, 63, 54));
+      }
+
+      .child {
+        height: 20px;
+        background-color: rgb(255, 68, 0);
+        /*border: dotted 6px black;*/
+        /* margin-bottom: 170px; */
+      }
+      .vertical {
+        width: 64px;
+        height: 290px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        
+      }
+
+      .verticalleft {
+        width: 64px;
+        height: 36%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+
+      .topbar {
+        width: 200px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .bottombar {
+        width: 290px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      #letter1 {
+          top: 30px;
+          left: 100px;
+      }
+      #letter2 {
+          top: 30px;
+          left: 440px;
+      }
+      #letter3 {
+          top: 30px;
+          left: 770px;
+      }
+      #letter4 {
+            top: 30px;
+            left:1110px;
+        }
+
+      #letter5 {
+            top: 30px;
+            left:1450px;
+        }
+
+      .semicircle {
+        width: 200px;
+        height: 100px;
+        border: 10px solid rgb(255, 255, 255);
+        border-top: none;
+        border-bottom-left-radius: 75px;
+        border-bottom-right-radius: 75px;
+        background: linear-gradient(to bottom, rgba(141, 232, 255, 0), rgb(58, 105, 180));
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+      }
+
+      .rightbar {
+        width: 10px;
+        height: 180px;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        right: 60px;
+        bottom: 90px;
+      }
+      
+      .topbar2 {
+        width: 100px;
+        height: 10px;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: 20px;
+        right: 60px;
+      }
+
+      .semicircle2 {
+        width: 100px;
+        height: 50px;
+        border: 10px double rgb(63, 136, 0);
+        border-top: none;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 50px;
+        position: absolute;
+        bottom: 20px;
+        left: 90px;
+      }
+
+      .rightbar2 {
+        width: 0px;
+        height: 160px;
+        border-right: 10px double rgb(63, 136, 0);
+        position: absolute;
+        right: 90px;
+        bottom: 80px;
+      }
+
+      .topdot {
+        width: 30px;
+        height: 30px;
+        border: 16px dotted rgb(255, 255, 255);
+        color: rgb(63, 136, 0); 
+        border-radius: 50%;
+        position: absolute;
+        top: 35px;
+        right: 65px;
+      }
+
+      .topdotfill {
+        width: 30px;
+        height: 30px;
+        background-color: rgb(255, 238, 0);
+        border-radius: 50%;
+        position: absolute;
+        top: 52px;
+        right: 80px;
+      }
+      
+      .ground {
+        width: 300px;
+        height: 40px;
+        background-color: rgb(122, 177, 74);
+        border-top: dashed 8px rgb(129, 200, 66);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      .bg {
+        width: 300px;
+        height: 300px;
+        background-color: rgb(84, 0, 0);
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .oval {
+        width: 200px;
+        height: 160px;
+        background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(77, 0, 0, 0));
+        border-radius: 100%;
+        position: absolute;
+        top: 2px;
+        left: 50px;
+      }
+
+      .ovalblur {
+        width: 200px;
+        height: 180px;
+        background-color: rgb(255, 80, 80);
+        border-radius: 100%;
+        position: absolute;
+        bottom: 2px;
+    
+        filter: blur(40px);
+      }
+
+      .glow {
+        width: 300px;
+        height: 200px;
+        background-color: rgb(255, 115, 115);
+        border-radius: 100%;
+        position: absolute;
+        bottom: -60px;
+        filter: blur(40px);
+      }
+
+      .rightbar3 {
+        width: 10px;
+        height: 80px;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        right: 120px;
+        bottom: 100px;
+      }
+
+      .semicircle3 {
+        width: 64px;
+        height: 20px;
+        border: 10px solid rgb(255, 255, 255);
+        border-top: none;
+        border-bottom-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+        position: absolute;
+        bottom: 70px;
+        left: 96px;
+      }
+
+      .topdot2 {
+        width: 0;
+        height: 0;
+        border: 8px solid rgb(255, 255, 255);
+        color: rgb(63, 136, 0); 
+        border-radius: 50%;
+        position: absolute;
+        top: 80px;
+        right: 118px;
+      }
+
+
+
+      .rightbar4 {
+        width: 10px;
+        height: 120px;
+        
+        background: linear-gradient(to right, rgb(184, 215, 217), rgb(0, 63, 54));
+        position: absolute;
+        right: 100px;
+        bottom: 100px;
+        rotate: -8deg;
+      }
+
+      .semicircle4 {
+        width: 100px;
+        height: 50px;
+        
+        border: 10px ridge rgb(184, 215, 217);
+        border-top: none;
+        border-bottom-left-radius: 80px;
+        border-bottom-right-radius: 100px;
+        position: absolute;
+        bottom: 40px;
+        left: 92px;
+        rotate: -8deg;
+      }
+
+      .triangle {
+        position: absolute;
+        top: 160px;
+        left: 95px;
+   width: 0px;
+   height: 0px;
+   border: 10px ridge rgb(184, 215, 217);
+   border-width: 40px 0px 20px 40px;
+   border-color: transparent transparent #c5e7e9 transparent;
+   transform: rotate(80deg);
+}
+
+.loop {
+    position: absolute;
+    top: 50px;
+    left: 164px;
+    width: 20px;
+    height: 20px;
+    border: 10px ridge rgb(184, 215, 217);
+    border-radius: 100%;
+}
+
+.bubble1 {
+    position: absolute;
+    top: 30px;
+    left: 200px;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at 20px 30px, rgba(255, 255, 255, 0), rgba(135, 241, 255, 0.75));
+    border-radius: 100%;
+}
+
+.bubble2 {
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle at 20px 30px, rgba(255, 255, 255, 0), rgba(135, 241, 255, 0.75));
+    border-radius: 100%;
+}
+
+.bubble3 {
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0), rgba(135, 241, 255, 0.75));
+    border-radius: 100%;
+}
+
+.bubble4 {
+    position: absolute;
+    top: 160px;
+    left: 150px;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0), rgba(135, 241, 255, 0.75));
+    border-radius: 100%;
+}
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+
+
+    <div class="wrapper">
+
+    <div id="letter1" class="parent">
+      
+      <div class="child topbar"></div>
+      <div class="child bottombar"></div>
+      <div class="child vertical"></div>
+      <div class="child verticalleft"></div>
+    </div>
+    <div id="letter2" class="parent2">
+      <div class="semicircle"></div>
+      <div class="rightbar"></div>
+      <div class="topbar2"></div>
+      <div class="child"></div>
+    </div>
+    <div id="letter3" class="parent3">
+        <div class="ground"></div>
+        <div class="semicircle2"></div>
+        <div class="rightbar2"></div>
+        <div class="topdot"></div>
+        <div class="topdotfill"></div>
+      </div>
+      <div id="letter4" class="parent4">
+        <div class="glow"></div>
+        <div class="bg"></div>
+        <div class="rightbar3"></div>
+        <div class="semicircle3"></div>
+        <div class="topdot2"></div>
+        <div class="ovalblur"></div>
+        <div class="oval"></div>
+        </div>
+
+        <div id="letter5" class="parent5">
+            <div class="rightbar4"></div>
+            <div class="semicircle4"></div>
+            <div class="triangle"></div>
+            <div class="loop"></div>
+            <div class="bubble1"></div>
+            <div class="bubble2"></div>
+            <div class="bubble3"></div>
+            <div class="bubble4"></div>
+        </div>
+
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
