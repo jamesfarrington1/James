@@ -57,7 +57,7 @@ padding-top: 56.25%; /* 16:9 aspect ratio */
     width: 100%;
     height: 100%;
     background-size: cover;
-    filter: drop-shadow(0 0 100px rgba(0, 255, 225, 0.188));
+    filter: drop-shadow(0 0 100px rgba(0, 255, 225, 0.296));
   }
   
   body.exterior .background {
