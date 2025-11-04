@@ -1,0 +1,1153 @@
+
+html {
+    background-color: rgb(0, 0, 0);
+}
+
+body {
+    background-size: cover;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Workbench', sans-serif;
+    font-variation-settings:
+    "BLED" 0,
+    "SCAN" -18;
+  }
+
+h1 {
+    font-size: 100px;
+    font-weight: 100;
+    color: red;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.43);
+  }
+h2 {
+    font-family: 'Workbench', sans-serif;
+    font-size: 88px;
+}
+p {
+    font-family: monospace;
+    font-size: 20px;
+}
+
+
+
+.page-container {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+.page-container::before {
+content: "";
+display: block;
+padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+
+  .background {
+    z-index: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: drop-shadow(0 0 100px rgba(0, 255, 225, 0.188));
+  }
+  
+  body.exterior .background {
+    background-image: url(img/museum-exterior-fx.png);
+  }
+
+
+  body.exhibition .background {
+    background-image: url(img/exhibition-fxv2.png);
+  }
+body.tutknife .background{
+    background-image: url(img/pedestal-fx.png);
+}
+body.antikythera .background{
+    background-image: url(img/pedestal-fx.png);
+}
+body.hammer .background{
+    background-image: url(img/pedestal-fx.png);
+}
+body.sabudisk .background{
+    background-image: url(img/pedestal-fx.png);
+}
+body.head .background{
+    background-image: url(img/pedestal-fx.png);
+}
+body.complaint .background{
+    background-image: url(img/pedestal-fx.png);
+}
+body.battery .background{
+    background-image: url(img/pedestal-fx.png);
+}
+body.rongorongo .background{
+    background-image: url(img/pedestal-fx.png);
+}
+body.pirireis .background{
+    background-image: url(img/pedestal-fx.png);
+}
+body.phaistos .background{
+    background-image: url(img/pedestal-fx.png);
+}
+body.sphere .background{
+    background-image: url(img/pedestal-fx.png);
+}
+body.voynich .background{
+    background-image: url(img/pedestal-fx.png);
+}
+body.dodec .background{
+    background-image: url(img/pedestal-fx.png);
+}
+body.betz .background{
+    background-image: url(img/pedestal-fx.png);
+}
+
+
+
+
+body.map .background{
+    background-image: url(img/map-fx.png);
+}
+
+
+
+
+
+
+#map {
+    position: absolute;
+    top: 80%;
+    left: 85%;
+    width: 200px;
+    height: 200px;
+    mix-blend-mode: hard-light;
+    filter: drop-shadow(0 0 18px rgb(0, 0, 0));
+
+    /* border: 5px solid red;
+   background-color: rgba(255, 0, 0, 0.395); */
+    cursor: pointer;
+}
+#map:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+    cursor: pointer;
+}
+#map img {
+    display: block;
+    width: 190px;
+    height: auto;
+}
+/*#mapbig {
+position: absolute;
+top: 64%;
+left: 50%;
+transform: translate(-50%, -50%);
+transform-origin: center;
+width: 80%;
+height: auto;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+border: 5px solid red;
+background-color: rgba(255, 0, 0, 0.395);
+cursor: pointer;
+} */
+#mapbig img {
+    display: block;
+    width: 1400px;
+    height: auto;
+}
+
+.title {
+    position:absolute;
+    top: 5%;
+    right: 6%;
+    width: 100%;
+    text-align: right;
+    color: red;
+
+    mix-blend-mode: difference;
+}
+#door {
+    position: absolute;
+    top: 61.8%;
+    left: 44.6%;
+    width: 8%;
+    height: 12%;
+
+   /* border: 5px solid red;
+   background-color: rgba(255, 0, 0, 0.395); */
+    cursor: pointer;
+}
+#door:hover {
+    transform: scale(1.3);
+    transition: transform 10.6s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+    mix-blend-mode: multiply;
+}
+
+#door img {
+    display: block;
+    width: 125%;
+    height: 140%;
+    mix-blend-mode: multiply;
+}
+
+
+#backarrow {
+    position: absolute;
+    top: -13%;
+    left: -40%;
+    width: 100px;
+    height: 100px;
+
+   /* border: 5px solid red; 
+   background-color: rgba(255, 0, 0, 0.395); */
+    cursor: pointer;
+}
+#backarrow:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+#backout {
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    width: 20%px;
+    height: 5%px;
+
+   /*  border: 5px solid red;
+   background-color: rgba(255, 0, 0, 0.383); */
+    cursor: pointer;
+    color: red;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+#flag {
+    position: absolute;
+    top: 6%;
+    left: 37%;
+    width: 300px;
+    height: auto;
+
+   /* border: 5px solid red; */
+    cursor: pointer;
+}
+#flag img {
+    display: block;
+    width: 100px;
+    height: auto;
+    mix-blend-mode: multiply;
+
+   /* filter: drop-shadow(0 0 25px rgb(255, 0, 0)); */
+}
+#flag:hover img {
+    transform-origin: bottom left;
+    transform: scale(1.3);
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+#flagtext {
+    position: absolute;
+    transform-origin: center;
+ transform: translate(-50%, 350%);
+    top: 50%;
+    left: 50%;
+    width: 2000px;
+    height: auto;
+    z-index: 9999;
+
+    mix-blend-mode:
+    hard-light;
+
+    
+
+   /* border: 5px solid red; */
+}
+#flagtext h1 {
+    font-size: 50px;
+    color: red;
+    text-align: center;
+    mix-blend-mode: difference;
+}
+
+.title-exhibition {
+    position: absolute;
+    top: 17%;
+    left: 5%;
+    width: 800px;
+    color: red;
+    text-align: left;
+    color: red;
+
+    transform: rotateX(-34deg) rotateY(-20deg) skewX(0deg);
+  transform-origin: center;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.description {
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    width: 600px;
+    color: red;
+    text-align: left;
+    color: red;
+}
+.description-map {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    width: 90%;
+    color: red;
+    text-align: center;
+    color: red;
+   
+    line-height: 10%;
+}
+
+
+
+#tutknife {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* border: 5px solid red; */
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+  }
+  #tutknife img {
+    display: block;
+    width: 180px;
+    height: auto;
+
+   /* filter: drop-shadow(0 0 25px rgb(255, 0, 0)); */
+  }
+  #tutknife:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+#tutknifeimg {
+    position: absolute;
+    top: 59%;
+    left: 13%;
+    /*border: 5px solid red;*/
+    display: inline-block;
+    width: fit-content;  
+
+  
+}
+#tutknifeimg img {
+    display: block;
+    width: 600px;
+    height: auto;
+    filter: drop-shadow(0 0 120px rgb(255, 0, 0));
+}
+#tutknife-map {
+    position: absolute;
+    top: 69.4%;
+    left: 51%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+}
+#tutknife-map img {
+    display: block;
+    width: 100px;
+    height: auto;
+    z-index: 9999;
+}
+#tutknife-map:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+#antikythera {
+    position: absolute;
+    top: 46%;
+    left: 60%;
+  /*  border: 5px solid red; */
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;  
+}
+#antikythera img {
+    display: block;
+    width: 100px;
+    height: auto;
+
+   /* filter: drop-shadow(0 0 25px rgb(255, 0, 0)); */
+}
+#antikytheraimg {
+    position: absolute;
+    top: 27%;
+    left: 16%;
+  /*  border: 5px solid red; */
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;  
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.566));
+}
+#antikytheraimg img {
+    display: block;
+    width: 500px;
+    height: auto;
+}
+#antikythera:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+#antikythera-map {
+    position: absolute;
+    top: 63%;
+    left: 52%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+}
+#antikythera-map img {
+    display: block;
+    width: 60px;
+    height: auto;
+    z-index: 9999;
+}
+#antikythera-map:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+#hammer {
+    position: absolute;
+    top: 47%;
+    left: 66%;
+  /*  border: 5px solid red; */
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;  
+}
+#hammer img {
+    display: block;
+    width: 100px;
+    height: auto;
+
+  /*  filter: drop-shadow(0 0 25px rgb(255, 0, 0)); */
+}
+#hammer:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+#hammerimg {
+    position: absolute;
+    top: 37%;
+    left: 15%;
+  /*  border: 5px solid red; */
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;  
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.566));
+}
+#hammerimg img {
+    display: block;
+    width: 500px;
+    height: auto;
+}
+#hammer-map {
+    position: absolute;
+    top: 82%;
+    left: 18%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+}
+#hammer-map img {
+    display: block;
+    width: 80px;
+    height: auto;
+    z-index: 9999;
+}
+#hammer-map:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+#sabudisk {
+    position: absolute;
+    top: 46.5%;
+    left: 72%;
+ /*   border: 5px solid red; */
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;  
+}
+#sabudisk img {
+    display: block;
+    width: 100px;
+    height: auto;
+
+ /*   filter: drop-shadow(0 0 25px rgb(255, 0, 0)); */
+}
+#sabudisk:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+#sabudiskimg {
+    position: absolute;
+    top: 40%;
+    left: 16%;
+  /*  border: 5px solid red; */
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;  
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.566));
+}
+#sabudiskimg img {
+    display: block;
+    width: 500px;
+    height: auto;
+}
+#sabudisk-map {
+    position: absolute;
+    top: 70%;
+    left: 51.5%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+}
+#sabudisk-map img {
+    display: block;
+    width: 80px;
+    height: auto;
+    z-index: 1000;
+}
+#sabudisk-map:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+#head {
+    position: absolute;
+    top: 45%;
+    left: 75.5%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    z-index: 2;
+  }
+  #head img {
+    display: block;
+    width: 180px;
+    height: auto;
+  }
+    #head:hover img {
+        transform: scale(1.5);
+        transition: transform 0.3s;
+        filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+    }
+
+#headimg {
+    position: absolute;
+    top: 44.5%;
+    left: 16%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;  
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.566));
+    z-index: 3;
+}
+#headimg img {
+    display: block;
+    width: 500px;
+    height: auto;
+    z-index: 4;
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.866));
+}
+#head-map {
+    position: absolute;
+    top: 85%;
+    left: 18%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+}
+#head-map img {
+    display: block;
+    width: 120px;
+    height: auto;
+    z-index: 9999;
+}
+#head-map:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+#complaint {
+    position: absolute;
+    top: 40%;
+    left: 82.5%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    z-index: 2;
+}
+#complaint img {
+    display: block;
+    width: 80px;
+    height: auto;
+}
+
+#complaint:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+#complaintimg {
+    position: absolute;
+    top: 35.5%;
+    left: 24%;
+    display: inline-block;
+    width: fit-content;  
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.566));
+    z-index: 3;
+}
+#complaintimg img {
+    display: block;
+    width: 200px;
+    height: auto;
+    z-index: 4;
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.866));
+}
+#complaint-map {
+    position: absolute;
+    top: 68%;
+    left: 58%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+}
+#complaint-map img {
+    display: block;
+    width: 40px;
+    height: auto;
+    z-index: 9999;
+}
+#complaint-map:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+#battery {
+    position: absolute;
+    top: 57%;
+    left: 53%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    z-index: 2;
+}
+#battery img {
+    display: block;
+    width: 110px;
+    height: auto;
+}
+#battery:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+#batteryimg {
+    position: absolute;
+    top: 38.8%;
+    left: 18.5%;
+    display: inline-block;
+    width: fit-content;  
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.566));
+    z-index: 3;
+}
+#batteryimg img {
+    display: block;
+    width: 400px;
+    height: auto;
+    z-index: 4;
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.866));
+}
+#battery-map {
+    position: absolute;
+    top: 68%;
+    left: 60%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+}
+#battery-map img {
+    display: block;
+    width: 80px;
+    height: auto;
+    z-index: 9999;
+}
+#battery-map:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+#rongorongo {
+    position: absolute;
+    top: 61%;
+    left: 59.8%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    z-index: 2;
+}
+#rongorongo img {
+    display: block;
+    width: 110px;
+    height: auto;
+}
+#rongorongo:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+#rongorongoimg {
+    position: absolute;
+    top: 50%;
+    left: 16.5%;
+    display: inline-block;
+    width: fit-content;  
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.566));
+    z-index: 3;
+}
+#rongorongoimg img {
+    display: block;
+    width: 500px;
+    height: auto;
+    z-index: 4;
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.866));
+}
+#rongorongo-map {
+    position: absolute;
+    top: 95%;
+    left: 25%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+}
+#rongorongo-map img {
+    display: block;
+    width: 80px;
+    height: auto;
+    z-index: 9999;
+}
+#rongorongo-map:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+#pirireis {
+    position: absolute;
+    top: 56.4%;
+    left: 66.5%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    z-index: 2;
+}
+#pirireis img {
+    display: block;
+    width: 80px;
+    height: auto;
+}
+#pirireis:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+#pirireisimg {
+    position: absolute;
+    top: 31%;
+    left: 21%;
+    display: inline-block;
+    width: fit-content;  
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.566));
+    z-index: 3;
+}
+#pirireisimg img {
+    display: block;
+    width: 300px;
+    height: auto;
+    z-index: 4;
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.866));
+}
+#pirireis-map {
+    position: absolute;
+    top: 65%;
+    left: 56%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+}
+#pirireis-map img {
+    display: block;
+    width: 40px;
+    height: auto;
+    z-index: 9999;
+}
+#pirireis-map:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+#phaistos {
+    position: absolute;
+    top: 58.5%;
+    left: 72%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    z-index: 2;
+}
+#phaistos img {
+    display: block;
+    width: 100px;
+    height: auto;
+}
+#phaistos:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+#phaistosimg {
+    position: absolute;
+    top: 33.5%;
+    left: 18.7%;
+    display: inline-block;
+    width: fit-content;  
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.566));
+    z-index: 3;
+}
+#phaistosimg img {
+    display: block;
+    width: 400px;
+    height: auto;
+    z-index: 4;
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.866));
+}
+#phaistos-map {
+    position: absolute;
+    top: 66%;
+    left: 53.5%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+}
+#phaistos-map img {
+    display: block;
+    width: 50px;
+    height: auto;
+    z-index: 9000;
+}
+#phaistos-map:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+#sphere {
+    position: absolute;
+    top: 58.9%;
+    left: 77.15%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    z-index: 2;
+}
+#sphere img {
+    display: block;
+    width: 120px;
+    height: auto;
+}
+#sphere:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+#sphereimg {
+    position: absolute;
+    top: 34.9%;
+    left: 16.2%;
+    display: inline-block;
+    width: fit-content;  
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.566));
+    z-index: 3;
+}
+#sphereimg img {
+    display: block;
+    width: 480px;
+    height: auto;
+    z-index: 4;
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.866));
+}
+#sphere-map {
+    position: absolute;
+    top: 88%;
+    left: 50.3%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+}
+#sphere-map img {
+    display: block;
+    width: 80px;
+    height: auto;
+    z-index: 9999;
+}
+#sphere-map:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+#voynich {
+    position: absolute;
+    top: 58%;
+    left: 84%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    z-index: 2;
+}
+#voynich img {
+    display: block;
+    width: 80px;
+    height: auto;
+}
+#voynich:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+#voynichimg {
+    position: absolute;
+    top: 32%;
+    left: 20.7%;
+    display: inline-block;
+    width: fit-content;  
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.566));
+    z-index: 3;
+}
+#voynichimg img {
+    display: block;
+    width: 300px;
+    height: auto;
+    z-index: 4;
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.866));
+}
+#voynich-map {
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+}
+#voynich-map img {
+    display: block;
+    width: 40px;
+    height: auto;
+    z-index: 9999;
+}
+#voynich-map:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+#dodec {
+    position: absolute;
+    top: 60%;
+    left: 12%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    z-index: 2;
+}
+#dodec img {
+    display: block;
+    width: 150px;
+    height: auto;
+}
+#dodec:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+#dodecimg {
+    position: absolute;
+    top: 37%;
+    left: 18.3%;
+    display: inline-block;
+    width: fit-content;  
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.566));
+    z-index: 3;
+}
+#dodecimg img {
+    display: block;
+    width: 400px;
+    height: auto;
+    z-index: 4;
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.866));
+}
+#dodec-map {
+    position: absolute;
+    top: 60%;
+    left: 47.5%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+}
+#dodec-map img {
+    display: block;
+    width: 70px;
+    height: auto;
+    z-index: 9999;
+}
+#dodec-map:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+#betz {
+    position: absolute;
+    top: 60%;
+    left: 18%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    z-index: 2;
+}
+#betz img {
+    display: block;
+    width: 220px;
+    height: auto;
+}
+#betz:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+#betzimg {
+    position: absolute;
+    top: 42%;
+    left: 12.7%;
+    display: inline-block;
+    width: fit-content;  
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.566));
+    z-index: 3;
+}
+#betzimg img {
+    display: block;
+    width: 600px;
+    height: auto;
+    z-index: 4;
+    filter: drop-shadow(0 0 220px rgba(255, 0, 0, 0.866));
+}
+#betz-map {
+    position: absolute;
+    top: 78.4%;
+    left: 22.3%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+}
+#betz-map img {
+    display: block;
+    width: 100px;
+    height: auto;
+    z-index: 9999;
+}
+#betz-map:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+
+#nav-left {
+    position: absolute;
+    top: 50%;
+    left: 2.5%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+}
+#nav-left img {
+    display: block;
+    width: 100px;
+    height: auto;
+    z-index: 10;
+}
+#nav-left:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+#nav-right {
+    position: absolute;
+    top: 50%;
+    left: 92.5%;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+}
+#nav-right img {
+    display: block;
+    width: 100px;
+    height: auto;
+    z-index: 10;
+}
+#nav-right:hover img {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}

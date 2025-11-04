@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Artifacts of the Unknown</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Workbench&display=swap" rel="stylesheet">
+
+
+
+
+
+
+    
+  </head>
+
+  <body class="exterior">
+    <div class="page-container">
+      <div class="background"></div>
+      
+      <div class="title">
+        <h1>Artifacts <br>of the <br>Unknown</h1>
+      </div>
+  
+      
+
+      <a href="exhibition.html">
+        <div id="door">
+          <img src="img/door-fx.png">
+          </div>
+        </a>
+
+      <div id="flag">
+        <img src="img/flag.png">
+      </div>
+
+      <div id="flagtext">
+        <h1></h1>
+      </div>
+
+
+    </div>
+
+    <script>
+      console.log("SCRIPT IS RUNNING!");
+      
+      const flag = document.getElementById('flag');
+      const flagText = document.querySelector('#flagtext h1');
+      
+      console.log("Flag:", flag);
+      console.log("FlagText:", flagText);
+      
+      if (flag && flagText) {
+          flag.addEventListener("mouseenter", () => {
+              flagText.textContent = "James Farrington | Web as Medium | RISD 2025";
+          });
+          flag.addEventListener("mouseleave", () => {
+              flagText.textContent = "";
+          });
+      }
+      </script>
+  </body>
+
+  
+</html>
