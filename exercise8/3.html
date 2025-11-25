@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercise 8</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #5e0021 0%, #000000 100%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: #ffc400;
+            text-decoration: overline;
+        }
+
+        .circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            animation: grow 3s ease-in-out infinite;
+            opacity: 1;
+          }
+
+          @keyframes grow {
+            0% { transform: translate(-50%, -50%) scale(0); }
+            100% { transform: translate(-50%, -50%) scale(5); }
+          }
+
+          </style>
+
+  </head>
+  <body>
+
+    <h1>Circles</h1>
+
+    <script>
+      for (let i = 0; i < 10; i++) {
+        let c = document.createElement('div');
+        c.classList.add('circle');
+
+        let size = 10 + i * 20;
+        c.style.width = size + 'px';
+        c.style.height = size + 'px';
+
+    
+
+        let hue = Math.floor(Math.random() * 100);
+        c.style.border = '2px solid hsl(' + hue + ', 100%, 50%)';
+
+        c.style.animationDelay=(i * 0.3) + 's';
+
+        document.body.appendChild(c);
+      }
+    </script>
+
+
+<a href="index.html">
+  <button style="
+  ">
+  
+  <h3>First Pattern</h3>
+  </a>
+
+
+  </body>
+</html>
