@@ -1,0 +1,1173 @@
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: linear-gradient(to bottom, rgb(147, 219, 255), rgb(0, 157, 255));
+    color: rgb(225, 255, 0);
+    min-height: 100vh;
+
+}
+
+#gifOverlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(147, 147, 147);
+  z-index: 12000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease-out;
+
+  
+}
+
+#gifOverlay.visible {
+  opacity: 1;
+}
+
+#gifOverlay img {
+  width: 100%;
+  max-width: 100vw;
+  height: auto;
+  object-fit: contain;
+  filter: hue-rotate(-52deg); brightness(1.2);
+}
+
+#gifOverlay h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  color: white;
+  text-shadow: 0 0 12px black;
+  pointer-events: none;
+  text-align: center;
+  z-index: 1;  
+}
+
+
+#countdownOverlay {
+  position: fixed;
+  inset: 0;                       
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;             
+  z-index: 9999;
+  
+
+
+  mix-blend-mode: difference;
+}
+
+#countdownText {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.064em; ;
+  font-size: 60rem;
+  color: rgb(255, 140, 0);
+  text-transform: uppercase;
+  text-align: center;
+
+
+
+  margin-right: 4%;
+  
+  opacity: .15;
+
+
+  transform: scaleX(.5);
+  transform-origin: center;
+}
+
+
+
+
+
+#childButton {
+  visibility: hidden;
+}
+
+.ya-image {
+  display: none;
+}
+
+.ya-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.eld-image {
+  display: none;
+}
+.eld-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.protonet-image {
+  display: none;
+}
+.protonet-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.side-nav {
+  display: none;
+}
+
+.side-nav ul {
+  list-style: none;
+  margin: 0%;
+  padding: 0%;
+}
+.side-nav li {
+  margin-bottom: 32px;
+}
+.side-nav a {
+  color: rgb(6, 98, 203);
+  font-size: .9rem;
+}
+
+
+  .nav ul {
+    list-style: none;  
+    padding: 0;
+    margin: 0;
+    text-align: right;
+  }
+    .nav li {
+        display: inline;   
+        margin-right: 16px;
+    }
+   a {
+   /* color: rgb(176, 0, 82);*/
+   color: white;
+   }
+
+
+
+
+
+
+
+
+
+
+
+   
+
+  h1 {
+    margin: 0;
+    font-size: 8rem;
+    line-height: .9;
+    font-weight: 900;
+    /*-webkit-text-stroke: 1px rgb(176, 0, 82);*/
+   /* text-shadow: 10px 10px 18px rgba(0, 157, 255, 0.5); */
+  }
+
+
+  
+  h2 {
+    margin: 0;
+    font-size: 2rem;
+
+   /*  text-shadow: 2px 2px 4px rgba(0, 157, 255, 0.5); */
+  }
+  p {
+    margin: 0;
+    font-size: .8rem;
+    line-height: 1.5;
+    color: white;
+  }
+
+
+  
+  .page {
+    max-width: 1100px;   
+    margin: 0 auto;      
+   /* padding: 72px 32px; */
+
+    
+
+  }
+
+@keyframes wobble {
+    0%, 100% {
+      transform: rotate(-1deg);
+    }
+    50% {
+      transform: rotate(1deg);
+    }
+}
+
+
+
+  .tilt-header {
+    /*perspective: 1200px;*/
+    margin-bottom: 0px;
+
+   /* animation: wobble 8s ease infinite;*/
+
+  }
+  .tilt {
+   /* perspective: 1200px;*/
+   /* scale: .9;
+    margin-right: 10%;*/
+  }
+
+
+  .layout {
+    display: grid;
+    grid-template-columns: 2fr minmax(330px, 1.5fr);
+    gap: 10px;
+    align-items: flex-start;
+
+
+    
+
+   /* transform: rotateY(-18deg) rotateX(4deg);
+    transform-style: preserve-3d;
+    transform-origin: center left;*/
+
+    
+  }
+  .hero {
+    text-align: left;
+    margin-bottom: 0px;
+
+    /*transform: rotateY(28deg) rotateX(4deg);
+    transform-style: preserve-3d;
+    transform-origin: center left;
+
+    margin-left: 10%;
+    scale: 1.2;*/
+  }
+
+  .main-column,
+  .side-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10%;  
+
+  }
+  
+
+  section {
+        position: relative;
+        padding: 16px 16px 26px 16px;
+        border-radius: 16px;
+      
+       
+       
+      }
+
+  .state-info {
+    position: sticky;
+    top: 0;
+   
+  }
+
+  .clock {
+        position: relative;
+        padding-bottom: 56px; /* extra space so text doesn't overlap the button */
+  }
+
+ #clockText {
+    font-size: .8rem;
+    line-height: 1.1;
+    font-weight: regular;
+    color: rgb(0, 0, 0);
+    /* text-shadow: 2px 2px 4px rgba(0, 157, 255, 0.5); */
+    text-transform: lowercase;
+ }
+
+  .clock-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: bottom;
+
+   
+  }
+
+  #stateButton {
+    margin-top: 0px;
+    margin-left: 50%;
+    padding: 10px 16px;
+    background: rgb(0, 119, 255);  
+    color: white;
+   /* border: solid white 2px; */
+   border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 157, 255, 0.5);
+    transition: 
+    all 0.3s ease;
+  }
+  #stateButton:hover {
+    background-color:  rgb(137, 190, 255);  /* this will fade */
+  color: rgb(255, 255, 255);
+  transform: scale(1.1);
+  z-index: 3;
+  }
+
+
+  @media (max-width: 800px) {
+    .layout {
+      grid-template-columns: 1fr; /* stack vertically */
+    }
+  
+    .hero {
+      text-align: left;
+    }
+  
+    .page {
+      padding: 16px 12px;         /* a little tighter on small screens */
+    }
+
+    .state-info {
+      position: static;
+    }
+  }
+
+
+
+
+body[data-state="newborn"] {
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(224, 237, 246));
+    color: rgb(0, 0, 0);
+    background-size: 100vh 100vh;
+    text-shadow: none;
+}
+body[data-state="newborn"] h1 {
+  text-shadow: none;
+  text-transform: lowercase;
+}
+body[data-state="newborn"] p {
+  color: black;
+}
+
+
+
+
+
+body[data-state="child"] {
+    background: linear-gradient(to bottom, rgb(201, 230, 107), rgb(66, 105, 15));
+    color: rgb(0, 32, 255);
+}
+
+
+
+
+
+body[data-state="young adult"] {
+    background: linear-gradient(to bottom, rgb(147, 255, 178), rgb(0, 255, 99));
+    color: rgb(255, 0, 140);
+}
+
+
+
+body[data-state="adult"] {
+    background: white;
+    color: rgb(255, 0, 0);
+
+ 
+    font-family: serif;
+
+  
+}
+
+
+
+
+
+body[data-state="near-death"] {
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(50, 50, 50));
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+/* NEWBORN LAYOUTTTTTTTT ______________ */
+
+body[data-state="newborn"] .hero {
+    text-align: left;
+    margin: 5% 0% 10% 2%;
+    padding: 0;
+    width: 20%;
+}
+body[data-state="newborn"] .hero::after {
+    content:"";
+    position: absolute;
+    top: 0;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/oldmancomp.webp');
+    background-size: cover;
+    opacity: .5;
+    pointer-events: none;
+
+    mask-image: linear-gradient(to right, transparent 0%, transparent 40%, black 70%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 40%,black 70%);
+
+    filter: blur(2px);
+
+  z-index: -1;
+}
+
+
+
+body[data-state="newborn"] section {
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+  border-radius: 10px;
+    text-shadow: none;
+}
+
+body[data-state="newborn"] #stateButton {
+    margin-left:75%;
+    text-transform: lowercase;
+}
+
+
+
+body[data-state="newborn"] .tagline {
+    display: block;
+    font-size: 1.3rem;
+    line-height: normal;
+    width: 450%;
+    margin-top: 10%;
+}
+
+body[data-state="newborn"] nav ul {
+    display: block;
+    color: black;
+    padding: 20px;
+}
+body[data-state="newborn"] nav a {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+body[data-state="newborn"] .layout {
+   
+    margin-top: 20%;
+}
+
+
+
+body[data-state="newborn"] #childButton {
+    visibility: visible;
+}
+
+body[data-state="newborn"] #childButton {
+  margin-top: 20px;
+  margin-left: 0%;
+  padding: 10px 16px;
+  background: rgb(0, 119, 255);  
+  color: white;
+ /* border: solid white 2px; */
+ border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 157, 255, 0.5);
+  transition: 
+  all 0.3s ease;
+  font: system-ui, sans-serif;
+  text-transform: lowercase;
+}
+body[data-state="newborn"] #childButton:hover {
+  background-color:  rgb(137, 190, 255);  /* this will fade */
+color: rgb(255, 255, 255);
+transform: scale(1.1);
+z-index: 3;
+}
+
+
+
+
+/*TEEENNNNNN______________________*/
+
+
+
+
+body[data-state="teen"] nav {
+    padding: 20px;
+}
+
+body[data-state="teen"] section {
+  background:
+  radial-gradient(circle at top center,
+    rgba(255, 255, 255, 0.292) 0%,
+    rgba(255, 255, 255, 0.0) 55%),
+  radial-gradient(circle at bottom center,
+    rgb(105, 207, 255) 0%,
+    rgba(0, 200, 255, 0.0) 70%),
+ 
+ linear-gradient(to bottom,
+    rgba(255, 255, 255, 0.46) 0%,
+    rgb(80, 188, 255) 50%,
+    rgba(0, 191, 255, 0.759) 100%);
+
+border: 2px solid rgb(255, 255, 255);
+box-shadow:
+  0 18px 40px rgba(0, 136, 255, 0.28),
+  0 0 0 1px rgba(255, 255, 255, 0.4) inset;
+
+backdrop-filter: blur(12px);
+}
+
+
+body[data-state="teen"] #stateButton {
+    margin-left:45%;
+    background:
+  radial-gradient(circle at top center,
+    rgba(255, 255, 255, 0.292) 0%,
+    rgba(255, 255, 255, 0.0) 55%),
+  radial-gradient(circle at bottom center,
+    rgb(105, 207, 255) 0%,
+    rgba(0, 200, 255, 0.0) 70%),
+ 
+ linear-gradient(to bottom,
+    rgba(255, 255, 255, 0.46) 0%,
+    rgb(80, 188, 255) 50%,
+    rgba(0, 191, 255, 0.759) 100%);
+
+border: 2px solid rgb(255, 255, 255);
+box-shadow:
+  0 18px 40px rgba(0, 136, 255, 0.28),
+  0 0 0 1px rgba(255, 255, 255, 0.4) inset;
+
+
+  color: rgb(208, 255, 0);
+  font-weight: bold;
+  text-shadow: 0px 4px 4px rgba(0, 129, 176, 0.623);
+
+backdrop-filter: blur(12px);
+
+text-transform: lowercase;
+}
+
+body[data-state="teen"] #clockText {
+    color: white;
+    font-size: 1.8rem;
+}
+
+body[data-state="teen"] h1 {
+    text-shadow: 0px 10px 8px rgba(0, 129, 176, 0.479);
+    text-transform: lowercase;
+  }
+
+  body[data-state="teen"] h2 {
+    text-shadow: 0px 4px 4px rgba(0, 129, 176, 0.455);
+  }
+
+
+
+
+
+/*CHILDDDDDDDDDDDD_____________________________________________________*/
+
+
+body[data-state="child"] nav {
+    width: 100%;
+    background-color: #2a2a2a;
+    padding: 16px 32px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.46);
+}
+body[data-state="child"] nav ul {
+    text-align: right;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px;
+    
+    font-weight: 100;
+}
+
+
+
+
+
+
+
+body[data-state="child"] .hero {
+    text-align: center;
+    margin: 10% 0% 10% 0%;
+    padding: 0;
+    width: 100%;
+}
+body[data-state="child"] .hero::before {
+    content:"";
+    position: absolute;
+    top: 0;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/2015.jpg');
+    background-size: cover;
+    opacity: .2;
+    pointer-events: none;
+
+  
+
+   /* filter: blur(2px);*/
+
+  z-index: -1;
+
+}
+
+
+body[data-state="child"] .layout {
+   
+  margin-top: 30%;
+}
+
+body[data-state="child"] #childButton {
+    visibility: visible;
+    margin-top: 5%;
+    padding: 20px 50px;
+    font-size: 1.2rem;
+    color: white;
+    text-transform: uppercase;
+
+    background: linear-gradient(to top, rgb(181, 221, 86), rgb(181, 221, 86));
+
+    border: none;
+    /*box-shadow: 0px 8px 10px rgb(0, 0, 0);*/
+
+    position: relative;
+    z-index: 11;
+
+    transition: all 0.3s ease;
+}
+body[data-state="child"] #childButton:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+    /*box-shadow: 0px 12px 14px rgb(0, 0, 0); */
+    transition: all 0.3s ease;
+}
+
+
+
+body[data-state="child"] h1 {
+    font-family: "brush script mt", cursive;
+    font-size: 10rem;
+    color: white;
+    /*text-shadow: 0px 10px 8px rgba(0, 0, 0, 0.188);*/
+    text-transform: capitalize;
+}
+
+body[data-state="child"] p {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, sans-serif;
+    /*text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.455);*/
+}
+body[data-state="child"] h2 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: white;
+    /*text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.455);*/
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+
+body[data-state="child"] .tagline {
+    display: block;
+    align-content: center;
+    font-size: 1.4rem;
+    line-height: normal;
+    width: 50%;
+    margin-top: .75rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, sans-serif;
+   /* text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.614);*/
+
+    font-weight: 100;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+body[data-state="child"] section {
+    background: rgba(255, 255, 255, 0.2);
+    border: 0px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);*/
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0px;
+    color: white;
+    /*text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.455);*/
+}
+
+body[data-state="child"] #stateButton {
+  margin-left:75%;
+  visibility: hidden;
+}
+
+body[data-state="child"] .clock {
+    color: white;
+  }
+
+body[data-state="child"] #clockText {
+    color: white;
+  }
+
+body[data-state="child"] #currentState {
+    color: rgb(72, 72, 72);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*YOUNG ADULTTTTTTT________________________________________________*/
+
+body[data-state="young adult"] .layout {
+    grid-template-columns: 180px 2fr minmax(330px, 1.5fr);
+    align-items: stretch;
+}
+
+body[data-state="young adult"] .side-nav {
+display: block;
+padding: 20px;
+background-color: aliceblue;
+border-right: 1px solid black;
+}
+
+
+body[data-state="young adult"] .nav {
+    padding: 0px 20px 0px 20px;
+    background: linear-gradient(to left, rgb(255, 255, 255), rgb(40, 144, 228));
+    max-width: 923px;
+    align-self: center;
+    margin: 0px auto 0 auto;
+}
+
+body[data-state="young adult"] .nav a {
+    color: rgb(255, 255, 255);
+    visibility: hidden;
+}
+
+body[data-state="young adult"] .nav::before {
+    content: "the mortal web";
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-right: auto;
+    color: white;
+    font-style: italic;
+}
+
+
+body[data-state="young adult"] .hero {
+    text-align: center;
+    margin: 10% 0% 10% 0%;
+    padding: 0;
+    width: 100%;
+    visibility: hidden;
+}
+
+body[data-state="young adult"] {
+
+background: rgb(198, 198, 198);
+color: black;
+font-family: "Verdana", "Trebuchet MS", Arial, sans-serif;
+}
+
+body[data-state="young adult"] .page {
+    max-width: 960px;
+    margin: 40px auto;
+    margin-top: 0px;
+    background: #f2f2f5;
+    border: 1px solid #000000;
+    box-shadow: 0 0 0 1px #000000;
+    padding-bottom: 24px;
+}
+
+body[data-state="young adult"] .layout {
+    background: white;
+    border: 1px solid #000000;
+    box-shadow: 0 0 0 1px #000000;
+    color: black;
+    margin-top: -40%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+body[data-state="young adult"] p {
+    color: grey ;
+}
+body[data-state="young adult"] h2 {
+  color: rgb(63, 144, 225) ;
+}
+
+body[data-state="young adult"] h1 {
+  text-transform: lowercase;
+}
+
+body[data-state="young adult"] #stateButton {
+    visibility: hidden;
+}
+
+body[data-state="young adult"] #currentState {
+    background: white;
+    
+    color: rgb(0, 0, 0) ;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+body[data-state="young adult"] .ya-image {
+    display: block;
+    margin-top: 12px;
+    width: 200px;
+}
+
+body[data-state="young adult"] #clockText {
+    color: grey;
+  }
+
+
+
+
+
+
+
+/*ADULT____________________________________________________*/
+
+
+
+
+body[data-state="adult"] {
+  background: #f0f0f0;
+  color: #ff0000;
+  font-family: "Times New Roman", Georgia, serif;
+}
+
+
+
+body[data-state="adult"] .hero {
+ 
+  padding: 24px 0;
+  background: #fff4bf;   
+  text-align: center;
+  margin: 0 -24px 24px; 
+ 
+}
+
+body[data-state="adult"] .hero h1 {
+  font-size: 5rem;
+  color: #ff0000;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+body[data-state="adult"] .tagline {
+  color: black;
+}
+
+body[data-state="adult"] .page {
+  max-width: 640px;
+  margin: 0px auto;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  box-shadow: none;
+  padding-bottom: 40px;
+  min-height: 100vh;
+  padding: 0 24px 40px;
+}
+
+body[data-state="adult"] p {
+  color: black;
+}
+
+body[data-state="adult"] h2 {
+  color: rgb(255, 0, 0);
+  text-transform: capitalize;
+}
+
+body[data-state="adult"] .nav {
+  display: none;
+}
+
+body[data-state="adult"] {
+  color: red;
+}
+
+body[data-state="adult"] #stateButton {
+  background: none;
+  text-shadow: none;
+  color: blue;
+font-family: 'Times New Roman', Times, serif;
+text-decoration: underline;
+content: "View the calendar";
+margin-left: 73%;
+width: 200px;
+}
+
+body[data-state="adult"] section {
+  background: none;
+ 
+  transform: none;
+  border: 1px solid red;
+  border-radius: 0;
+  padding: 3px;
+}
+
+body[data-state="adult"] #stateButton:hover {
+  background: none
+  color: none;
+  transform: none;
+}
+
+
+
+
+
+/*ELDERLY__________________________________________________*/
+
+
+
+body[data-state="elderly"] {
+  background: #262626;
+    background-color: bfbfbf;
+    color: rgb(0, 0, 0);
+    font-family: "times new roman", serif;
+    min-width: 100vh;
+
+}
+
+body[data-state="elderly"] .page {
+  max-width: 520px;
+  margin: 0px auto;
+  background: #c1c1c1;      
+  border: 1px solid #000;
+  padding: 24px 32px 40px;
+  box-shadow: none;
+  min-width: 100vh;
+}
+
+body[data-state="elderly"] .nav {
+  display: none;
+}
+
+body[data-state="elderly"] .layout {
+  margin: 0;
+  padding: 0px 0;
+  background: #c1c1c1;    
+  text-align: center;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0px;
+  margin: 0;
+  padding: 0px 0;
+  text-align: left;
+}
+
+body[data-state="elderly"] .hero h1 {
+  font-size: 2rem;
+  color: black;
+  margin: 0;
+  text-shadow: none;
+  font-weight: bold;
+  text-transform: capitalize;
+ 
+}
+
+body[data-state="elderly"] h1 {
+
+  text-transform: capitalize;
+ 
+}
+
+body[data-state="elderly"] .tagline {
+  color: black;
+  font-size: .8rem;
+  margin-top: 8px;
+}
+
+body[data-state="elderly"] p {
+  color: black;
+  font-size: .8rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+body[data-state="elderly"] h2 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+body[data-state="elderly"] #stateButton {
+ display: block;
+ background: none;
+  text-shadow: none;
+  color: blue;
+  text-decoration: underline;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-left: -2.5%;
+}
+body[data-state="elderly"] #stateButton:hover {
+  background: none;
+  color: none;
+  transform: none;
+}
+
+body[data-state="elderly"] section {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+body[data-state="elderly"] .eld-image {
+  display: block;
+  margin-top: 12px;
+  width: 20%;
+}
+
+
+
+/*NEAR-DEATH_______________________________________________*/
+
+
+
+body[data-state="near-death"] {
+    background: black;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    min-height: 100vh;
+}
+
+body[data-state="near-death"] .nav,
+body[data-state="near-death"] .side-nav{
+  display: none;
+}
+
+body[data-state="near-death"] .page {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #000000;
+  border: 0px solid #444444;
+  padding: 32px 40px 48px;
+  box-shadow: none;
+}
+
+body[data-state="near-death"] .layout {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+body[data-state="near-death"] section {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+body[data-state="near-death"] .hero h1 {
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+  text-shadow: none;
+  font-weight: normal;
+}
+
+body[data-state="near-death"] .tagline {
+  color: white;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+body[data-state="near-death"] p {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.2;
+  text-align: left;
+ 
+}
+
+body[data-state="near-death"] h2 {
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+body[data-state="near-death"] h1 {
+  text-transform: lowercase;
+  font-weight: normal;
+}
+
+body[data-state="near-death"] #stateButton {
+  display: block;
+  background: none;
+   text-shadow: none;
+   color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1rem;
+   text-align: left;
+   margin-left: -1.64%;
+   text-transform: uppercase;
+ }
+ body[data-state="near-death"] #stateButton:hover {
+   background: none;
+   color: none;
+   transform: none;
+ }
+
+
+body[data-state="near-death"] #currentState {
+    color: white !important;
+    font-size: 1rem;
+    font-weight: normal;
+   
+}
+
+body[data-state="near-death"] #clockText {
+  font-size: 1rem;
+    color: white;
+  }
+
+body[data-state="near-death"] .protonet-image {
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 12px;
+  width: 100%;
+}

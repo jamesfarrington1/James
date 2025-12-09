@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>The Mortal Web</title>
+
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+
+  <body data-state = "mon">
+
+    <nav class="nav">
+      <ul>
+        <li><a href="#">about</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+    </nav>
+
+
+
+    <div class="page">
+
+      
+
+      <div class="tilt-header">
+      <header class="hero">
+        <h1 class="title">the mortal web.</h1>
+        <p class="tagline">An interactive exploration of life, death, and the web</p>
+
+        <button id="childButton">Time Travel</button>
+
+      </header>
+      </div>
+
+      <div class="tilt">
+      <main class="layout">
+
+
+        <section class="protonet-image">
+          <img src="img/protonet.png">
+        </section>
+
+<!---NEW SIDEBAR-->
+
+<nav class="side-nav">
+  <ul>
+    <li><a href="#">about</a></li>
+    <li><a href="#" id="sidebarCalendar">time travel</a></li>
+    <li><a href="#">contact</a></li>
+  </ul>
+</nav>
+
+
+
+        <div class="main-column">
+
+          
+        
+            <section class="introduction">
+              <h2>welcome</h2>
+              <p>In this interactive experience, you will explore the concept of mortality as it relates to the web. Navigate through different states of being and discover how life and death intertwine in the digital realm.<br><br>*These pages aren't meant to function as a traditional website, but rather as an aesthetic journey through the life cycle of web technologies and platforms. Certain buttons or links will not have any effect when clicked.
+              </p>
+            </section>
+          
+            
+           
+          
+            
+         
+
+
+
+          
+
+          <section class="interaction">
+            <h2>your journey</h2>
+            <p>Use the "Time Travel" ability to transition between states of being. Each state will show the degradation of web space as we go back in time.</p>
+            
+          </section>
+
+
+          <section class="eld-image">
+            <img src="img/95comp.png">
+          </section>
+
+          <button id="stateButton">Time Travel</button>
+        </div>
+
+
+
+<!----RUGHT SIDE---------------------------------->
+
+
+        <aside class="side-column">
+          
+          <section class="state-info">
+            <h2>current state: <span id="currentState" >young adult</span></h2>
+            <p id="stateDescription">You are currently in the "young adult" state, experiencing the vibrancy of the mature Web 2.0.</p>
+          </section>
+
+
+
+          
+
+          <!----CLOCK---------------------------------->
+          <section class="clock">
+            <h2>today is</h2>
+          
+            <div class="clock-row">
+              <p id="clockText">--:--</p>
+            </div>
+          </section>
+
+          <section class="ya-image">
+            <img src="img/2003comp.jpg">
+          </section>
+
+        </aside>
+      </main>
+      </div>
+
+    </div>
+
+
+<!----CALENDAR---------------------------------->
+
+
+
+<!----
+
+<div id="calendarOverlay" class="overlay">
+  <div class="overlay-content">
+    <h2 id="overlayTitle">time travel</h2>
+
+    <div class="calendar-grid">
+      <div class="calendar-day" data-state="mon">mon</div>
+      <div class="calendar-day" data-state="tue">tue</div>
+      <div class="calendar-day" data-state="wed">wed</div>
+      <div class="calendar-day" data-state="thu">thu</div>
+      <div class="calendar-day" data-state="fri">fri</div>
+      <div class="calendar-day" data-state="sat">sat</div>
+      <div class="calendar-day" data-state="sun">sun</div>
+    </div>
+
+    <button id="closeCalendar">close</button>
+  </div> -->
+
+
+
+
+</div>
+     
+
+
+
+<div id="gifOverlay">
+  <h1>The Mortal Web</h1>
+  <img src="img/timetravel.gif" alt="" />
+  
+</div>
+
+<div id="countdownOverlay">
+  <div id="countdownText">--:--:--</div>
+</div>
+
+
+
+<script src="script.js"></script>
+  </body>
+  
+
+  
+</html>
