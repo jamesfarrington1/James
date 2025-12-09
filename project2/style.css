@@ -834,6 +834,7 @@ body[data-state="young adult"] h2 {
 
 body[data-state="young adult"] h1 {
   text-transform: lowercase;
+  font-style: italic;
 }
 
 body[data-state="young adult"] #stateButton {
